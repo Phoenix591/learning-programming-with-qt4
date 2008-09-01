@@ -1,0 +1,211 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>624</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <widget class="QWebView" name="webView" >
+    <property name="geometry" >
+     <rect>
+      <x>50</x>
+      <y>100</y>
+      <width>631</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="url" >
+     <url>
+      <string>http://www.google.com/</string>
+     </url>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar" >
+    <property name="geometry" >
+     <rect>
+      <x>40</x>
+      <y>540</y>
+      <width>118</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value" >
+     <number>24</number>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit" >
+    <property name="geometry" >
+     <rect>
+      <x>390</x>
+      <y>60</y>
+      <width>241</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>http://www.google.com</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Stop" >
+    <property name="geometry" >
+     <rect>
+      <x>280</x>
+      <y>60</y>
+      <width>106</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>Stop</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="foward" >
+    <property name="geometry" >
+     <rect>
+      <x>170</x>
+      <y>60</y>
+      <width>106</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>Foward</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Back" >
+    <property name="geometry" >
+     <rect>
+      <x>60</x>
+      <y>60</y>
+      <width>106</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>Back</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile" >
+    <property name="title" >
+     <string>File</string>
+    </property>
+    <addaction name="actionQuit" />
+   </widget>
+   <addaction name="menuFile" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" />
+  <action name="actionQuit" >
+   <property name="text" >
+    <string>Quit</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKit/QWebView</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>webView</sender>
+   <signal>loadProgress(int)</signal>
+   <receiver>progressBar</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>365</x>
+     <y>342</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>98</x>
+     <y>578</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Stop</sender>
+   <signal>clicked()</signal>
+   <receiver>webView</receiver>
+   <slot>stop()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>132</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>365</x>
+     <y>342</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Back</sender>
+   <signal>clicked()</signal>
+   <receiver>webView</receiver>
+   <slot>back()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>62</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>365</x>
+     <y>342</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>foward</sender>
+   <signal>clicked()</signal>
+   <receiver>webView</receiver>
+   <slot>forward()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>182</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>365</x>
+     <y>342</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
