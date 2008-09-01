@@ -1,0 +1,37 @@
+ 
+#include <fstream>
+#include <iostream>
+//int open (int x, int y );
+using namespace std;
+int openk ( char *argv[] );
+int main ( int argc, char *argv[] , char x)
+{
+  if ( argc == 1 ) // argc should be 2 for correct execution
+    // We print argv[0] assuming it is the program name
+    cout<<"usage: "<< argv[0] <<" <filename> (handles up to 10 files)\n";
+  else {
+char** x; // We assume argv[1] is a filename to open
+int y;  
+for (  y < 11; y++ ;) 
+ openk ( y) ;
+}
+    // the_file is closed implicitly here
+int openk ( char *argv[] ) {
+ // We assume argv[1] is a filename to open
+
+  
+  ifstream the_file ( argv[y] );
+    // Always check to see if file opening succeeded
+    if ( !the_file.is_open() ) 
+      cout<<"Could not open file\n";
+    else {
+      char x;
+      // the_file.get ( x ) returns false if the end of the file
+      //  is reached or an error occurs
+      while ( the_file.get ( x ) )
+  return 0;    
+
+   // the_file is closed implicitly here
+} 
+ }
+}

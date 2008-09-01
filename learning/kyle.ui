@@ -1,0 +1,94 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>808</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>MainWindow</string>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac" >
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <layout class="QVBoxLayout" >
+    <item>
+     <widget class="QCalendarWidget" name="calendarWidget" />
+    </item>
+    <item>
+     <widget class="KSysGuardProcessList" name="ksysguardprocesslist" />
+    </item>
+    <item>
+     <widget class="KDialog" name="K" >
+      <property name="whatsThis" >
+       <string>This is a test box</string>
+      </property>
+      <property name="styleSheet" >
+       <string>Text:/Hello! this is a </string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar" />
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>808</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMy_1st" >
+    <property name="title" >
+     <string>My 1st</string>
+    </property>
+    <addaction name="actionQuit" />
+   </widget>
+   <addaction name="menuMy_1st" />
+  </widget>
+  <action name="actionQuit" >
+   <property name="text" >
+    <string>Quit</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KDialog</class>
+   <extends>QDialog</extends>
+   <header>kdialog.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KSysGuardProcessList</class>
+   <extends>QWidget</extends>
+   <header>ksysguardprocesslist.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>403</x>
+     <y>549</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>403</x>
+     <y>324</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

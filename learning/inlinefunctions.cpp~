@@ -1,0 +1,14 @@
+ 
+#include <iostream>
+
+using namespace std;
+
+inline void hello()
+{ 
+  cout<<"hello";
+}
+int main()
+{
+  hello(); //Call it like a normal function...
+  cin.get();
+}
