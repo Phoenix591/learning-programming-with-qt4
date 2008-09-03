@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std; // So we can see cout and endl
-
+int pascal(int);
 int main()
 { 
   int x = 0;  // Don't forget to declare variables
@@ -12,13 +12,14 @@ int main()
   cin >> n;
   cout << "Variable or numbers?(1 or 2 )";
   cin >> v;
+ x = n;
 if ( v != n ) {
   while ( x > -1 ) { // While x is l²ess than 10 
-    cout<< "X^" << x << "Y^" << y ;
+    cout<< " X^" << x << " Y^" << y ;
     x--; 
 	y++;     // Update x so the condition can be met eventually
   }
-  }
+  }	pascal(n);
 }
 
 //	Pascal.cpp
@@ -69,14 +70,15 @@ void ShowNumber(int number)
 
 
 
-int pascal (int argc, char *argv[])
+int pascal (int n)
 {
 
 
 	//   Get the height.
 	int height = 1;
 	
-	int line=0;
+	int line= n;
+	
 	 
 	//  Go through each line....
 	for(int n; line <= height; line++)
