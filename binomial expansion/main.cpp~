@@ -8,18 +8,21 @@ int main()
   int y = 0;
   int n = 2;
   int v = 0;
-  cout << "Please enter an exponant";
+  cout << "Please enter an exponant : ";
   cin >> n;
   cout << "Variable or numbers?(1 or 2 )";
   cin >> v;
  x = n;
 if ( v != n ) {
   while ( x > -1 ) { // While x is l²ess than 10 
-    cout<< " X^" << x << " Y^" << y ;
+    cout<< " X^" << x << "Y^" << y ;
     x--; 
 	y++;     // Update x so the condition can be met eventually
+  } cout << "\nThe Coefficiants are : ";
+  else {
   }
-  }	pascal(n);
+}	pascal(n);
+
 }
 
 //	Pascal.cpp
@@ -72,17 +75,15 @@ void ShowNumber(int number)
 
 int pascal (int n)
 {
-
+     
 
 	//   Get the height.
 	int height = 1;
 	
-	int line=0;
+	int line = n;
 	
 	 
 	//  Go through each line....
-	for(int n; line <= height; line++)
-	{
 		for(int t=0;  t < ((height-n)); t++)
 			cout << "   ";
 	  
@@ -92,6 +93,6 @@ int pascal (int n)
 		cout << "1\n";
 	}
 
-	return 0;
-}
+	
+
 
