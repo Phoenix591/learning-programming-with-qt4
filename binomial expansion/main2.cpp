@@ -1,4 +1,6 @@
 #include <iostream>
+#include "BigIntegerLibrary.hh"
+
 using namespace std; // So we can see cout and endl
 int pascal();
 int n;
@@ -25,7 +27,7 @@ int pascal()
 {
 
 int line,c,x;
-void pasc(int);
+void pasc(BigInteger);
 
 //printf("\n\nEnter the no. of rows: ");
 //scanf("%d",&line);
@@ -49,15 +51,15 @@ cout <<"  1\n\n";
 //}
 
 
-void pasc(BigInt n)
+void pasc(BigInteger n)
 {
-      BigInt r;
- long fact(BigInt);
+      BigInteger r;
+ long fact(BigInteger);
             for(r=0;r<=n;r++)
                   printf("%3ld   ",fact(n)/(fact(n-r)*fact(r)));
 }
  
-long fact(BigInt v)
+long fact(int v)
 {
   if(v==1||v==0)
         return(1);
