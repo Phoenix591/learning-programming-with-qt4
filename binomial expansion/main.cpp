@@ -23,19 +23,17 @@ if ( v != n ) {
 
 }
 
-//	Pascal.cpp
-//	Copyright (c) Dave Kerr 2004
-//	An example of how to show pascals triangle.
+
 
 
 //    This function returns the factorial of a number, e.g.
 //    Factorial of 4 = 4 * 3 * 2 * 1 = 24
 
-int Factorial(int number)
+long int Factorial(long int number)
 {
 	if(number == 1 || number == 0) return 1;
 
-	int factorial = number;
+	long int factorial = number;
 	while(--number > 1)
 		factorial *= number;
   
@@ -47,25 +45,25 @@ int Factorial(int number)
 //  n!
 //  __
 //  r!(n-r)!
-int Combination(int n, int r)
+long int Combination(long int n, long int r)
 {
     return Factorial(n) / (Factorial(r) * Factorial(n-r));
 }
 
 //	ShowNumber will print the number and the correct amount
 //	of spaces, by working out how many digits there are in the number.
-void ShowNumber(int number)
+void ShowNumber(long int number)
 {
-	int digits = 1;
-	int e;
-	for(int e = 10; e <= 10000; e *= 10)
-	{
-		if((int)(number / e) > 0) digits++;
-		else break;
-	}
+	long int digits = 1;
+	long int e;
+	//for(float e = 10; e <= 30000; e *= 10)
+	//{
+	//	if((float)(number / e) > 0) digits++;
+	//	else break;
+	//}
 
 	cout << number;
-	for(e=0; e < (6-digits); e++)
+	for(e=0; e < (4-digits); e++)
 		cout << " ";
 }
 
@@ -82,7 +80,7 @@ int pascal (int n)
 	
 	 
 	//  Go through each line....
-		for(int t=0;  t < ((height-n)); t++)
+	//	for(int t=0;  t < ((height-n)); t++)
 			cout << "   ";
 	  
 		//  ...and print out every number.
