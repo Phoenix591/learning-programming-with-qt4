@@ -1,3 +1,4 @@
+// Copyright 2008 Kyle Elbert
 #include <iostream>
 #include "BigIntegerLibrary.hh"
 

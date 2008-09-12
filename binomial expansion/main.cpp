@@ -1,3 +1,4 @@
+// Copyright 2008 Kyle Elbert (aka g2g591)
 #include <iostream>
 
 using namespace std; // So we can see cout and endl
